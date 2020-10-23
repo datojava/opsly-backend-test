@@ -17,7 +17,7 @@ Maven 3
 1. Move to projects root directory (where pom.xml is located);
 2. Run command ``` mvn clean install ``` (if you want to run it without unit tests run following command ``` mvn clean install -DskipTests=true ```);
 3. Move to projects target directory;
-4. Run command ``` java -jar opsly-backend-test-0.0.1 ```;
+4. Run command ``` java -jar opsly-backend-test-0.0.1.jar ```;
 5. Open any browser and enter ``` localhost:3000 ``` (Or you can run it via ``` curl localhost:3000 ```);
 
 ## How to use (From IDE)
