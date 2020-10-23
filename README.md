@@ -1,35 +1,36 @@
-## Your mission:
+# Opsly backend
 
-A client needs to know what is happening on the social networks. All of them. Right now.
+Sample Project which loads all feed in one JSON from several social networks incudling:
 
-The three social networks the client is interested in are:
+1. Facebook;
+2. Twitter;
+3. Instagram
 
-https://takehome.io/twitter
+## REQUIREMENTS
 
-https://takehome.io/facebook
+Java 11
 
-https://takehome.io/instagram
+Maven 3
 
-Because these social networks are so webscale, they don't always respond predictably. The delay in their response almost appears like someone waited for a random integer of seconds before responding!
+## How to use
 
-Also, sometimes they will respond with an error. This error will not be valid JSON. Life's hard sometimes.
+1. Move to projects root directory (where pom.xml is located);
+2. Run command ``` mvn clean install ``` (if you want to run it without unit tests run following command ``` mvn clean install -DskipTests=true ```);
+3. Move to projects target directory;
+4. Run command ``` java -jar opsly-backend-test-0.0.1 ```;
+5. Open any browser and enter ``` localhost:3000 ``` (Or you can run it via ``` curl localhost:3000 ```);
 
-The client needs to be able to run your thing, then issue the command:
+## How to use (From IDE)
 
-```
-curl localhost:3000
-```
+This project can be imported in any Java IDE
+1. Open ``` com.opsly.newsfeed.app.Application.java ```;
+2. Open any browser and enter ``` localhost:3000 ``` (Or you can run it via ``` curl localhost:3000 ```);
 
-And get back a JSON response of the output from the three social networks in the format:
 
-```
-{ twitter: [tweets], facebook: [statuses], instagram: [photos] }
-```
+## Unit and Integration tests
 
-Order isn't important.
+There are several test cases In projects ``` src/test/java ``` directory. Tests are grouped in ``` RequestProcessingTests.java ``` and ``` SimpleTests.java ```
 
-This should be a quick little task, but the client is paying us A Billion dollars for it so make sure your implementation is as robust as it is beautiful.
+## About controller
 
-Don't forget to `git push` regularly.
-
-Have fun!
+Main controller class (``` FeedController.java ```) is located at following package ``` com.opsly.newsfeed.controllers ```.
